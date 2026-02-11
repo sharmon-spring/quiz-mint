@@ -28,3 +28,17 @@ function showQuestion() {
 
   resultElement.textContent = "";
 }
+
+answerButtons.forEach((button, index) => {
+  button.addEventListener("click", () => {
+    const correctIndex = questions[currentQuestionIndex].correct;
+
+    if (index === correctIndex) {
+      resultElement.textContent = "正解！";
+      score++;
+      scoreElement.textContent = score;
+    } else {
+      resultElement.textContent = "不正解...";
+    }
+  });
+});
