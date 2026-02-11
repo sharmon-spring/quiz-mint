@@ -31,6 +31,9 @@ function showQuestion() {
 
   answerButtons.forEach((button, index) => {
     button.textContent = currentQuestion.answers[index];
+    
+    button.classList.remove("correct");
+    button.classList.remove("wrong");
 });
 
   resultElement.textContent = "";
