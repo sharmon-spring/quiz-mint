@@ -1,13 +1,18 @@
 const questions = [
   {
-    question: "問題１",
-    answers: ["あ", "い", "う", "え"],
-    correct: 0
+    question: "日本の首都は？",
+    answers: ["北海道", "東京", "京都", "沖縄"],
+    correct: 1
   },
   {
-    question: "問題２",
-    answers: ["1", "2", "3", "4"],
+    question: "元素記号Hｇの元素名は？",
+    answers: ["ヘリウム", "銅", "水銀", "金"],
     correct: 2
+  },
+  {
+    question: "関ヶ原の戦いは何年に起きた？",
+    answers: ["1600年", "1653年", "1781年", "1890年"],
+    correct: 0
   }
 ];
 
