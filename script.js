@@ -26,17 +26,19 @@ const scoreElement = document.getElementById("score");
 const nextButton = document.getElementById("next-btn");
 
 function showQuestion() {
+  answerButtons.forEach(button => {
+    button.classList.remove("correct");
+    button.classList.remove("wrong");
+  });
+
+  resultElement.textContent = "";
+
   const currentQuestion = questions[currentQuestionIndex];
   questionElement.textContent = currentQuestion.question;
 
   answerButtons.forEach((button, index) => {
     button.textContent = currentQuestion.answers[index];
-    
-    button.classList.remove("correct");
-    button.classList.remove("wrong");
-});
-
-  resultElement.textContent = "";
+  });
 }
 
 answerButtons.forEach((button, index) => {
