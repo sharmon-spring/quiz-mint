@@ -16,3 +16,15 @@ const answerButtons = document.querySelectorAll(".btn");
 const resultElement = document.getElementById("result");
 const scoreElement = document.getElementById("score");
 const nextButton = document.getElementById("next-btn");
+
+function showQuestion() {
+  const currentQuestion = questions[currentQuestionIndex];
+  questionElement.textContent = currentQuestion.question;
+
+  answerButtons.forEach(function(button, index) {
+  console.log(button);
+  console.log(index);
+});
+
+  resultElement.textContent = "";
+}
