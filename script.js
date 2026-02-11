@@ -11,6 +11,9 @@ const questions = [
   }
 ];
 
+let currentQuestionIndex = 0;
+let score = 0;
+
 const questionElement = document.getElementById("question");
 const answerButtons = document.querySelectorAll(".btn");
 const resultElement = document.getElementById("result");
@@ -54,3 +57,5 @@ nextButton.addEventListener("click", () => {
     nextButton.style.display = "none";
   }
 });
+
+showQuestion();
