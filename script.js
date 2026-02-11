@@ -24,9 +24,8 @@ function showQuestion() {
   const currentQuestion = questions[currentQuestionIndex];
   questionElement.textContent = currentQuestion.question;
 
-  answerButtons.forEach(function(button, index) {
-  console.log(button);
-  console.log(index);
+  answerButtons.forEach((button, index) => {
+    button.textContent = currentQuestion.answers[index];
 });
 
   resultElement.textContent = "";
