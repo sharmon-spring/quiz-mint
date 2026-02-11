@@ -10,3 +10,9 @@ const questions = [
     correct: 2
   }
 ];
+
+const questionElement = document.getElementById("question");
+const answerButtons = document.querySelectorAll(".btn");
+const resultElement = document.getElementById("result");
+const scoreElement = document.getElementById("score");
+const nextButton = document.getElementById("next-btn");
