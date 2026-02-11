@@ -4,8 +4,28 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>クイズ</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-　　<h1>クイズ内容</h1>
+
+  <div class="quiz-container">
+    <h1>クイズアプリ</h1>
+
+    <h2 id="question">ここに問題が表示されます</h2>
+
+    <div id="answer-buttons">
+      <button class="btn">選択肢1</button>
+      <button class="btn">選択肢2</button>
+      <button class="btn">選択肢3</button>
+      <button class="btn">選択肢4</button>
+    </div>
+
+    <p id="result"></p>
+    <p>スコア: <span id="score">0</span></p>
+
+    <button id="next-btn">次の問題</button>
+  </div>
+
+  <script src="script.js"></script>
   </body>
 </html>
