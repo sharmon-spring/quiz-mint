@@ -40,12 +40,22 @@ answerButtons.forEach((button, index) => {
   button.addEventListener("click", () => {
     const correctIndex = questions[currentQuestionIndex].correct;
 
+    answerButtons.forEach(btn => {
+      btn.classList.remove("correct");
+      btn.classList.remove("wrong");
+    });
+
     if (index === correctIndex) {
       resultElement.textContent = "正解！";
       score++;
       scoreElement.textContent = score;
+      button.classList.add("correct");
     } else {
       resultElement.textContent = "不正解...";
+      button.classList.add("wrong");
+
+      answerButtons[correctIndex].classList.add("correct");
+      
     }
   });
 });
