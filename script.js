@@ -42,3 +42,15 @@ answerButtons.forEach((button, index) => {
     }
   });
 });
+
+nextButton.addEventListener("click", () => {
+  currentQuestionIndex++;
+
+  if (currentQuestionIndex < questions.length) {
+    showQuestion();
+  } else {
+    questionElement.textContent = "クイズ終了！";
+    resultElement.textContent = "最終スコア: " + score;
+    nextButton.style.display = "none";
+  }
+});
